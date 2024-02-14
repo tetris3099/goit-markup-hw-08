@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"/>
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <!-- Шапка -->
+    <header class="new">
+      <div class="conteiner">
+
+          <nav>
+            <a href="./index.html" class="logo"><span class="logo_web">Web</span>Studio</a>
+
+              <button tupe="button" 
+                class="mobile-menu" 
+                aria-expanded="false" 
+                aria-controls="menu-container" 
+                data-menu-button>
+                <svg  width="40" height="40" class="icon_mobile_menu">
+                  <use width="40" height="40" class="open-menu" href="/images/symbol-defs.svg#menu_navigation" ></use>
+                  <use width="40" height="40" class="close-menu" href="/images/symbol-defs.svg#close_navigation" ></use>
+                </svg>
+              </button>
+
+              <div class="menu-conteiner" id="menu-container" data-menu>
+                <ul class="navigate">
+                  <li>
+                    <a href="./index.html" class="list_navigate">Студія</a>
+                  </li>
+                  <li>
+                    <a href="./portfolio.html" class="list_navigate_portfolio">Портфоліо</a>
+                  </li>
+                  <li><a href="" class="list_navigate">Контакти</a></li>
+                </ul>
+
+                <ul class="contacts_list">
+                  <li>
+                    <a href="mailto:info@devstudio.com" class="contacts"><svg width="16" height="12" class="icon_contacts"> <use href="./images/symbol-defs.svg#envelope"/></svg>info@devstudio.com</a>
+                  </li>
+                  <li>
+                    <a href="tel:+380961111111" class="contacts_tel"><svg width="10" height="16" class="icon_contacts"><use href="./images/symbol-defs.svg#smartphone"/></svg>+38 096 111 11 11</a>
+                  </li>
+                </ul>
+
+                <ul class="navigate_social">
+                  <li><a href="" class="social_link">Instagram</a></li>
+                  <li><a href="" class="social_link">Twitter</a></li>
+                  <li><a href="" class="social_link">Facebook</a></li>
+                  <li><a href="" class="social_link">LinkedIn</a></li>
+                </ul>
+              </div>
+          </nav>
+      </div>
+    </header>
+
+    <!-- Main content -->
+    <main>
+      <!-- Hero -->
+      <section class="hero_portfolio">
+        <div class="conteiner">
+          <h1 class="visually_hidden">Портфоліо</h1>
+          <ul class="buttons">
+            <li class="items">
+              <button type="button" class="options">Усі</button>
+            </li>
+            <li class="items">
+              <button type="button" class="options">Веб-сайти</button>
+            </li>
+            <li class="items">
+              <button type="button" class="options">Додатки</button>
+            </li>
+            <br class="transfer">
+            <li class="items">
+              <button type="button" class="options">Дизайн</button>
+            </li>
+            <li class="items">
+              <button type="button" class="options">Маркетинг</button>
+            </li>
+          </ul>
+
+          <ul class="cards">
+            <li class="items">
+              <a href="" class="cards_link">
+                <div class="i_box">
+                  <img
+                  
+                  srcset="
+                  ../images/techno-450@2x.jpg 900w,
+                  ../images/techno-370@2x.jpg 740w,
+                  ../images/techno-354@2x.jpg 708w,
+                  ../images/techno-450.jpg 450w,
+                  ../images/techno-354.jpg 354w,
+                  ../images/techno-370.jpg 370w
+                  "
+                  sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (max-width: 767px) 450px"
+                  src="images/techno-450.jpg"
+                  alt="Приклад веб-сайту"
+                  width="100%"
+                  height="294"/>
+                  <div class="description_box">
+                    <p class="description_text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
+                      Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
+                  </div>
+                </div>  
+                <div class="text">
+                  <h2 class="name_project">Технокряк</h2>
+                  <p class="description_project">Веб-сайт</p>
+                </div>
+              </a>
+            </li>
+
+            <li class="items">
+              <a href="" class="cards_link">
+                <div class="i_box">
+                  <img
+                  srcset="
+                  ../images/basketball-450@2x.jpg 900w,
+                  ../images/basketball-370@2x.jpg 740w,
+                  ../images/basketball-354@2x.jpg 708w,
+                  ../images/basketball-450.jpg 450w,
+                  ../images/basketball-354.jpg 354w,
+                  ../images/basketball-370.jpg 370w
+                  "
+                  sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (max-width: 767px) 450px"
+                  src="images/basketball-450.jpg"
+                  alt="Момент гри баскетболу"
+                  width="100%"
+                  height="294"/>
+                  <div class="description_box">
+                    <p class="description_text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
+                    Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
+                  </div>
+                </div>
+                <div class="text">
+                  <h2 class="name_project">Постер New Orlean vs Golden Star</h2>
+                  <p class="description_project">Дизайн</p>
+                </div>
+              </a>
+            </li>
+
+            <li class="items">
+              <a href="" class="cards_link">
+                <div class="i_box">
+                  <img
+                  srcset="
+                  ../images/seafood-450@2x.jpg 900w,
+                  ../images/seafood-370@2x.jpg 740w
+                  ../images/seafood-354@2x.jpg 708w,
+                  ../images/seafood-450.jpg 450w,
+                  ../images/seafood-354.jpg 354w,
+                  ../images/seafood-370.jpg 370w
+                  "
+                  sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (max-width: 767px) 450px"
+                  src="images/seafood-450.jpg"
+                  alt="Логотип ресторану"
+                  width="100%"
+                  height="294"/>
+                  <div class="description_box">
+                    <p class="description_text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
+                    Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
+                  </div>
+                </div>
+                <div class="text">
+                  <h2 class="name_project">Ресторан Seafood</h2>
+                  <p class="description_project">Додаток</p>
+                </div>
+              </a>
+            </li>
+
+            <li class="items">
+              <a href="" class="cards_link">
+                <div class="i_box">
+                  <img
+                  srcset="
+                  ../images/prime-450@2x.jpg 900w,
+                  ../images/prime-370@2x.jpg 740w,
+                  ../images/prime-354@2x.jpg 708w,
+                  ../images/prime-450.jpg 450w,
+                  ../images/prime-354.jpg 354w,
+                  ../images/prime-370.jpg 370w
+                  "
+                  sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (max-width: 767px) 450px"
+                  src="images/prime-450.jpg"
+                  alt="Навушники"
+                  width="100%"
+                  height="294"/>
+                  <div class="description_box">
+                    <p class="description_text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
+                    Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
+                  </div>
+                </div>
+                <div class="text">
+                  <h2 class="name_project">Проєкт Prime</h2>
+                  <p class="description_project">Маркетинг</p>
+                </div>
+              </a>
+            </li>
+
+            <li class="items">
+              <a href="" class="cards_link">
+                <div class="i_box">
+                  <img
+                  srcset="
+                  ../images/boxes-450@2x.jpg 900w,
+                  ../images/boxes-370@2x.jpg 740w,
+                  ../images/boxes-354@2x.jpg 708w,
+                  ../images/boxes-450.jpg 450w,
+                  ../images/boxes-354.jpg 354w,
+                  ../images/boxes-370.jpg 370w
+                  "
+                  sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (max-width: 767px) 450px"
+                  src="images/boxes-450.jpg"
+                  alt="Біла та рожева коробка"
+                  width="100%"
+                  height="294" />
+                  <div class="description_box">
+                    <p class="description_text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
+                    Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
+                  </div>
+                </div>
+                <div class="text">
+                  <h2 class="name_project">Проєкт Boxes</h2>
+                  <p class="description_project">Додаток</p>
+                </div>
+              </a>
+            </li>
+
+            <li class="items">
+              <a href="" class="cards_link">
+                <div class="i_box">
+                  <img
+                  srcset="
+                  ../images/inspiration-450@2x.jpg 900w,
+                  ../images/inspiration-370@2x.jpg 740w,
+                  ../images/inspiration-354@2x.jpg 708w,
+                  ../images/inspiration-450.jpg 450w,
+                  ../images/inspiration-354.jpg 354w,
+                  ../images/inspiration-370.jpg 370w
+                  "
+                  sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (max-width: 767px) 450px"
+                  src="images/inspiration-450.jpg"
+                  alt="Приклад веб-сайту"
+                  width="100%"
+                  height="294"/>
+                  <div class="description_box">
+                    <p class="description_text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
+                    Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
+                  </div>
+                </div>
+                <div class="text">
+                  <h2 class="name_project">Inspiration has no Borders</h2>
+                  <p class="description_project">Веб-сайт</p>
+                </div>
+              </a>
+            </li>
+
+            <li class="items">
+              <a href="" class="cards_link">
+                <div class="i_box">
+                  <img
+                  srcset="
+                  ../images/limited-450@2x.jpg 900w,
+                  ../images/limited-370@2x.jpg 740w,
+                  ../images/limited-354@2x.jpg 708w,
+                  ../images/limited-450.jpg 450w,
+                  ../images/limited-354.jpg 354w,
+                  ../images/limited-370.jpg 370w
+                  "
+                  sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (max-width: 767px) 450px"
+                  src="images/limited-450.jpg "
+                  alt="Книжка в дезайнерській обробці"
+                  width="100%"
+                  height="294"/>
+                  <div class="description_box">
+                    <p class="description_text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
+                    Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
+                  </div>
+                </div>
+                <div class="text">
+                  <h2 class="name_project">Видання Limited Edition</h2>
+                  <p class="description_project">Дизайн</p>
+                </div>
+              </a>
+            </li>
+
+            <li class="items">
+              <a href="" class="cards_link">
+                <div class="i_box">
+                  <img
+                  srcset="
+                  ../images/lab-450@2x.jpg 900w,
+                  ../images/lab-370@2x.jpg 740w,
+                  ../images/lab-354@2x.jpg 708w,
+                  ../images/lab-450.jpg 450w,
+                  ../images/lab-354.jpg 354w,
+                  ../images/lab-370.jpg 370w
+                  "
+                  sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (max-width: 767px) 450px"
+                  src="images/lab-450.jpg"
+                  alt="Логотип проекту ЛАБ"
+                  width="100%"
+                  height="294"/>
+                  <div class="description_box">
+                    <p class="description_text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
+                    Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
+                  </div>
+                </div>
+                <div class="text">
+                  <h2 class="name_project">Проєкт LAB</h2>
+                  <p class="description_project">Маркетинг</p>
+                </div>
+              </a>
+            </li>
+
+            <li class="items" class="cards_link">
+              <a href="" class="cards_link">
+                <div class="i_box">
+                  <img
+                  srcset="
+                  ../images/busines-450@2x.jpg 900w,
+                  ../images/busines-370@2x.jpg 740w,
+                  ../images/busines-354@2x.jpg 708w,
+                  ../images/busines-450.jpg 450w,
+                  ../images/busines-354.jpg 354w,
+                  ../images/busines-370.jpg 370w
+                  "
+                  sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, (max-width: 767px) 450px"
+                  src="images/busines-450.jpg"
+                  alt="Приклад роботи додатку"
+                  width="100%"
+                  height="294"/>
+                  <div class="description_box">
+                    <p class="description_text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
+                    Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
+                  </div>
+                </div>
+                <div class="text">
+                  <h2 class="name_project">Growing Business</h2>
+                  <p class="description_project">Додаток</p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="basement">
+      <div class="conteiner">
+        <div class="theme">
+          <a href="./index.html" class="logo_basement"><span class="logo_web">Web</span>Studio</a>
+          <address>
+            <ul class="adress_list">
+              <li class="items">
+                <a
+                  href="https://www.google.com/maps/place/%D0%B1%D1%83%D0%BB.+%D0%9B%D0%B5%D1%81%D0%B8+%D0%A3%D0%BA%D1%80%D0%B0%D0%B8%D0%BD%D0%BA%D0%B8,+26,+%D0%9A%D0%B8%D0%B5%D0%B2,+02000/@50.4265807,30.5383858,17z/data=!3m1!4b1!4m5!3m4!1s0x40d4cf0e033ecbe9:0x57a4dffefec77da0!8m2!3d50.4265807!4d30.5383858"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="geolocation"
+                  >м. Київ, пр-т Лесі Українки, 26</a
+                >
+              </li>
+              <li class="items">
+                <a href="mailto:info@devstudio.com" class="contacts_basement"
+                  >info@devstudio.com</a
+                >
+              </li>
+              <li class="items">
+                <a href="tel:+380961111111" class="contacts_basement"
+                  >+38 096 111 11 11</a
+                >
+              </li>
+            </ul>
+          </address>
+        </div>
+        <div class="social_networks">
+          <p class="social_networks_text">ПРИЄДНУЙТЕСЬ</p>
+          <ul class="social_list_basement">
+            <li class="social_list_items">
+              <a href="" class="social_networks_link">
+                <svg width="20" height="20" class="social_list_icon">
+                  <use href="./images/symbol-defs.svg#instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social_list_items">
+              <a href="" class="social_networks_link">
+                <svg width="20" height="20" class="social_list_icon">
+                  <use href="./images/symbol-defs.svg#twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social_list_items">
+              <a href="" class="social_networks_link">
+                <svg width="20" height="20" class="social_list_icon">
+                  <use href="./images/symbol-defs.svg#facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social_list_items">
+              <a href="" class="social_networks_link">
+                <svg width="20" height="20" class="social_list_icon">
+                  <use href="./images/symbol-defs.svg#linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <form class="form_conteiner">
+          <p class="text_basement_form">Підпишіться на розсилку</p>
+            <input type="email" class="basement_form" placeholder="E-mail" required>
+          <button type="submit" class="subscription">
+            Підписатися 
+            <svg width="24" height="24" class="icon_subscription"> <use href="./images/symbol-defs.svg#subscription"/></svg>
+          </button>
+        </form>
+      </div>
+    </footer>
+    <script src="/js/menu.js"></script>
+    <script src="/js/modal.js"></script>
+  </body>
+</html>
