@@ -402,7 +402,7 @@ address {
 .navigate_social {
   display: none;
 }
-@media screen and (max-width: 435px) {
+@media screen and (max-width: 396px) {
   .navigate_social {
     overflow-x: auto;
   }
