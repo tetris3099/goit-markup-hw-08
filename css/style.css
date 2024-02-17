@@ -1622,6 +1622,12 @@ address {
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .cards .items:nth-last-child(-n + 1) {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
   .cards .items:not(:nth-child(2n)) {
     margin-right: 30px;
   }
