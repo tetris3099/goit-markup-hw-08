@@ -128,7 +128,6 @@
 }
 
 .cards .items{
-  height: 404px;
   margin-bottom: 30px;
   /* overflow: hidden; */
 
@@ -181,6 +180,12 @@
   border-left: 1px solid rgba(238, 238, 238, 1);
 }
 
+.cards_top {
+  @include mq (tablet-only) {
+    padding-bottom: 56px;
+  }
+}
+
 .name_project {
   margin: 0;
   margin-bottom: 4px;
@@ -188,6 +193,10 @@
   font-size: 18px;
   line-height: 2;
   color: var(--navigate-text-name-color);
+
+  @include mq (tablet-only) {
+    letter-spacing: 0.06em;
+  }
 }
 
 .description_project {
