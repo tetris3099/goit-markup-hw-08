@@ -212,7 +212,12 @@ address {
 @media screen and (max-width: 767.98px) {
   .navigate {
     display: block;
-    margin-bottom: 75.5%;
+    margin-bottom: 302px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .navigate {
+    margin-bottom: 125px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -228,16 +233,6 @@ address {
 @media screen and (min-width: 1200px) {
   .navigate {
     margin-left: 93px;
-  }
-}
-@media screen and (max-height: 639.98px) {
-  .navigate {
-    margin-bottom: 126px;
-  }
-}
-@media screen and (min-height: 640px) and (max-height: 735.98px) {
-  .navigate {
-    margin-bottom: 216px;
   }
 }
 
@@ -436,7 +431,7 @@ address {
     margin-top: 64px;
   }
 }
-@media screen and (max-height: 639.98px) {
+@media screen and (min-height: 320px) and (max-height: 639.98px) {
   .navigate_social {
     margin-top: 21px;
   }
