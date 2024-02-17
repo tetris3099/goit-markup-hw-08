@@ -73,7 +73,7 @@ address {
   }
 
   @include mq (desktop) {
-    max-width: 1600px;
+    max-width: 1200px;
   }
 }
 
@@ -100,17 +100,25 @@ address {
   z-index: 2;
   padding: 0;
   border: 0;
+  color: #000000;
   background-color: transparent;
+  transform: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   @include mq (tablet) {
     display: none;
   }
 }
 
+.mobile-menu:hover,
+.mobile-menu:focus {
+  color: var(--accent-web-color);
+}
+
 .icon_mobile_menu {
   display: flex;
   justify-content: center;
   align-items: center;
+  fill: currentColor;
 }
 
 .close-menu {
@@ -156,12 +164,13 @@ address {
 .menu-conteiner.is-open {
   @include mq (before-tablet) {
     display: block;
-    position: absolute;
-    top: 1%;
-    left: -1%;
+    // flex-wrap: wrap;
+    position: fixed;
+    top: 0%;
+    left: 0%;
     z-index: 1;
-    width: 102%;
-    height: auto;
+    width: 100vw;
+    height: 100vh;
     max-height: 796px;
     padding: 48px 40px;
 
@@ -192,12 +201,19 @@ address {
 }
 
 /* NAVIGATE */
+@media screen and (max-height: 629px) {
+  .navigate {
+    margin-bottom: 30%;
+  }
+}
+
 .navigate {
   padding: 0;
   margin: 0;
 
   @include mq (before-tablet) {
-    margin-bottom: 45%;
+    display: block;
+    margin-bottom: 75.5%;
   }
 
   @include mq (tablet) {
@@ -214,6 +230,8 @@ address {
   }
 
 }
+
+
 
 .navigate li:nth-child(2n) {
   @include mq (before-tablet) {
@@ -292,6 +310,7 @@ address {
   @include mq (before-tablet) {
     display: flex;
     flex-wrap: wrap-reverse;
+    width: 300px;
   }
 
   @include mq (tablet) {
@@ -369,15 +388,19 @@ address {
     padding-bottom: 32px;
     font-size: 14px;
   }
-
 }
 
-
+@media screen and (max-width: 376px) {
+  .contacts_tel {
+    font-size: 27px;
+  }
+}
 
 .icon_contacts{
   display: none;
 
   @include mq (tablet) {
+    display: block;
     margin-right: 10px;
     fill: currentColor;
   }
@@ -453,7 +476,7 @@ address {
 
 /* HERO */
 .hero {
-  max-width: 480px;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
   padding-top: 118px;
@@ -471,7 +494,6 @@ address {
     background-position: center;
 
     @include mq (tablet) {
-      max-width: 768px;
       background-image: 
       linear-gradient(
       to right,
@@ -483,7 +505,6 @@ address {
     @include mq (desktop) {
       margin-left: auto;
       margin-right: auto;
-      max-width: 1600px;
       padding-top: 200px;
       padding-bottom: 200px;
       background: var(--canvas-background);
@@ -517,10 +538,10 @@ address {
   text-transform: uppercase;
   color: var(--stock-text-color);
 
-  @include mq (desktop) {
-    max-width: none;
-    width: 690px;
-  }
+  // @include mq (desktop) {
+  //   max-width: none;
+  //   width: 690px;
+  // }
  }
 
 /* BUTTON */
@@ -635,6 +656,10 @@ address {
   line-height: 1.1;
   letter-spacing: 0.03em;
   color: var(--navigate-color);
+
+  @include mq (before-tablet) {
+    text-align: center;
+  }
 }
 
 .benefits_text {
@@ -869,23 +894,41 @@ address {
   margin: 0;
 
   @include mq (desktop) {
+    max-width: 1200px;
     flex-wrap: nowrap;
     justify-content: center;
   }
 }
 
 .clients_list_items {
-  width: 43.3%;
-  margin: 0 3.13% 6.29% 3.13%;
 
-  @include mq (tablet) {
+  @include mq (before-tablet) {
+    width: 43.3%;
+    margin: 0 3.13% 6.29% 3.13%;
+  }
+
+
+  @include mq (tablet-only) {
     width: 210px;
     margin: 0 15px 30px 15px;
   }
 }
 
+.clients_list_items:nth-last-child(-n + 2) {
+  @include mq (before-tablet) {
+    margin-bottom: 0;
+  }
+}
+
+.clients_list_items:nth-last-child(-n + 3) {
+  @include mq (tablet-only) {
+    margin-bottom: 0;
+  }
+}
+
 .clients_list_items + .clients_list_items {
   @include mq (desktop) {
+    margin: 0;
     margin-left: 30px;
   }
 }
@@ -930,7 +973,7 @@ address {
   @include mq (tablet) {
     display: flex;
     align-items: baseline;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
     text-align: none;
   }
@@ -1101,6 +1144,12 @@ address {
 
   transition: outline 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
+  @include mq (tablet) {
+    width: 418px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   @include mq (desktop) {
     display: inline-block;
     margin-right: 12px;
@@ -1164,6 +1213,7 @@ address {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 1000;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   background-color: rgba(0, 0, 0, 0.2);
@@ -1342,10 +1392,11 @@ address {
 }
 
 .checkbox_form {
-  width: 16px;
-  height: 15px;
-  position: relative;
-  opacity: 0;
+  display: none;
+//   width: 16px;
+//   height: 15px;
+//   position: relative;
+//   opacity: 0;
 }
 
 .checkbox_form:focus + .box_icon .icon_form_checkbox {
@@ -1364,7 +1415,7 @@ address {
 
 .icon_form_checkbox {
   position: absolute;
-  left: 22.5px;
+  left: 12.5px;
   fill: currentColor;
 
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), 
@@ -1410,6 +1461,34 @@ address {
     font-size: 12px;
     font-weight: 400;
     letter-spacing: 0.36px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .checkbox_text,
+  .checkbox_link {
+    font-size: 7.5px;
+  }
+}
+
+@media screen and (min-width: 360px) and (max-width: 388px) {
+  .checkbox_text,
+  .checkbox_link {
+    font-size: 9px;
+  }
+}
+
+@media screen and (min-width: 388px) and (max-width: 425px) {
+  .checkbox_text,
+  .checkbox_link {
+    font-size: 10px;
+  }
+}
+
+@media screen and (min-width: 425px) and (max-width: 434px) {
+  .checkbox_text,
+  .checkbox_link {
+    font-size: 11px;
   }
 }
 
