@@ -73,7 +73,7 @@ address {
 }
 @media screen and (min-width: 1200px) {
   .conteiner {
-    max-width: 1600px;
+    max-width: 1200px;
   }
 }
 
@@ -101,7 +101,9 @@ address {
   z-index: 2;
   padding: 0;
   border: 0;
+  color: #000000;
   background-color: transparent;
+  transform: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 @media screen and (min-width: 768px) {
   .mobile-menu {
@@ -109,10 +111,16 @@ address {
   }
 }
 
+.mobile-menu:hover,
+.mobile-menu:focus {
+  color: var(--accent-web-color);
+}
+
 .icon_mobile_menu {
   display: flex;
   justify-content: center;
   align-items: center;
+  fill: currentColor;
 }
 
 .close-menu {
@@ -161,12 +169,12 @@ address {
 @media screen and (max-width: 767.98px) {
   .menu-conteiner.is-open {
     display: block;
-    position: absolute;
-    top: 1%;
-    left: -1%;
+    position: fixed;
+    top: 0%;
+    left: 0%;
     z-index: 1;
-    width: 102%;
-    height: auto;
+    width: 100vw;
+    height: 100vh;
     max-height: 796px;
     padding: 48px 40px;
     background-color: #FFF;
@@ -197,13 +205,19 @@ address {
 }
 
 /* NAVIGATE */
+@media screen and (max-height: 629px) {
+  .navigate {
+    margin-bottom: 30%;
+  }
+}
 .navigate {
   padding: 0;
   margin: 0;
 }
 @media screen and (max-width: 767.98px) {
   .navigate {
-    margin-bottom: 45%;
+    display: block;
+    margin-bottom: 75.5%;
   }
 }
 @media screen and (min-width: 768px) {
@@ -298,6 +312,7 @@ address {
   .contacts_list {
     display: flex;
     flex-wrap: wrap-reverse;
+    width: 300px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -380,12 +395,17 @@ address {
   }
 }
 
+@media screen and (max-width: 376px) {
+  .contacts_tel {
+    font-size: 27px;
+  }
+}
 .icon_contacts {
   display: none;
 }
 @media screen and (min-width: 768px) {
   .icon_contacts {
-    display:block;
+    display: block;
     margin-right: 10px;
     fill: currentColor;
   }
@@ -403,7 +423,7 @@ address {
 .navigate_social {
   display: none;
 }
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 435px) {
   .navigate_social {
     overflow-x: auto;
   }
@@ -446,7 +466,7 @@ address {
 
 /* HERO */
 .hero {
-  max-width: 480px;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
   padding-top: 118px;
@@ -460,7 +480,6 @@ address {
 }
 @media screen and (min-width: 768px) {
   .hero {
-    max-width: 768px;
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/Header\ 768.jpg);
   }
 }
@@ -468,7 +487,6 @@ address {
   .hero {
     margin-left: auto;
     margin-right: auto;
-    max-width: 1600px;
     padding-top: 200px;
     padding-bottom: 200px;
     background: var(--canvas-background);
@@ -494,12 +512,6 @@ address {
   letter-spacing: 1.56px;
   text-transform: uppercase;
   color: var(--stock-text-color);
-}
-@media screen and (min-width: 1200px) {
-  .title {
-    max-width: none;
-    width: 690px;
-  }
 }
 
 /* BUTTON */
@@ -620,6 +632,11 @@ address {
   line-height: 1.1;
   letter-spacing: 0.03em;
   color: var(--navigate-color);
+}
+@media screen and (max-width: 767.98px) {
+  .benefits {
+    text-align: center;
+  }
 }
 
 .benefits_text {
@@ -861,24 +878,40 @@ address {
 }
 @media screen and (min-width: 1200px) {
   .clients_list {
+    max-width: 1200px;
     flex-wrap: nowrap;
     justify-content: center;
   }
 }
 
-.clients_list_items {
-  width: 43.3%;
-  margin: 0 3.13% 6.29% 3.13%;
+@media screen and (max-width: 767.98px) {
+  .clients_list_items {
+    width: 43.3%;
+    margin: 0 3.13% 6.29% 3.13%;
+  }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
   .clients_list_items {
     width: 210px;
     margin: 0 15px 30px 15px;
   }
 }
 
+@media screen and (max-width: 767.98px) {
+  .clients_list_items:nth-last-child(-n+2) {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .clients_list_items:nth-last-child(-n+3) {
+    margin-bottom: 0;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .clients_list_items + .clients_list_items {
+    margin: 0;
     margin-left: 30px;
   }
 }
@@ -924,7 +957,7 @@ address {
   .basement .conteiner {
     display: flex;
     align-items: baseline;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
     text-align: none;
   }
@@ -1092,6 +1125,13 @@ address {
   color: rgba(255, 255, 255, 0.6);
   transition: outline 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+@media screen and (min-width: 768px) {
+  .basement_form {
+    width: 418px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 @media screen and (min-width: 1200px) {
   .basement_form {
     display: inline-block;
@@ -1160,6 +1200,7 @@ address {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 1000;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
   background-color: rgba(0, 0, 0, 0.2);
 }
@@ -1331,10 +1372,7 @@ address {
 }
 
 .checkbox_form {
-  width: 16px;
-  height: 15px;
-  position: relative;
-  opacity: 0;
+  display: none;
 }
 
 .checkbox_form:focus + .box_icon .icon_form_checkbox {
@@ -1353,7 +1391,7 @@ address {
 
 .icon_form_checkbox {
   position: absolute;
-  left: 22.5px;
+  left: 12.5px;
   fill: currentColor;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -1399,6 +1437,30 @@ address {
   }
 }
 
+@media screen and (max-width: 360px) {
+  .checkbox_text,
+  .checkbox_link {
+    font-size: 7.5px;
+  }
+}
+@media screen and (min-width: 360px) and (max-width: 388px) {
+  .checkbox_text,
+  .checkbox_link {
+    font-size: 9px;
+  }
+}
+@media screen and (min-width: 388px) and (max-width: 425px) {
+  .checkbox_text,
+  .checkbox_link {
+    font-size: 10px;
+  }
+}
+@media screen and (min-width: 425px) and (max-width: 434px) {
+  .checkbox_text,
+  .checkbox_link {
+    font-size: 11px;
+  }
+}
 .button_form {
   width: 200px;
   height: 50px;
@@ -1544,7 +1606,6 @@ address {
 }
 
 .cards .items {
-  height: 404px;
   margin-bottom: 30px;
   /* overflow: hidden; */
 }
@@ -1596,6 +1657,12 @@ address {
   border-left: 1px solid rgb(238, 238, 238);
 }
 
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .cards_top {
+    padding-bottom: 56px;
+  }
+}
+
 .name_project {
   margin: 0;
   margin-bottom: 4px;
@@ -1603,6 +1670,11 @@ address {
   font-size: 18px;
   line-height: 2;
   color: var(--navigate-text-name-color);
+}
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .name_project {
+    letter-spacing: 0.06em;
+  }
 }
 
 .description_project {
