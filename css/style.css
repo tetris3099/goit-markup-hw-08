@@ -1612,7 +1612,6 @@ address {
 @media screen and (min-width: 768px) {
   .cards .items {
     width: calc((100% - 60px) / 2);
-    height: 440px;
   }
 }
 @media screen and (min-width: 1200px) {
