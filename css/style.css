@@ -1618,7 +1618,6 @@ address {
 
 .cards .items {
   margin-bottom: 30px;
-  /* overflow: hidden; */
 }
 @media screen and (min-width: 768px) {
   .cards .items {
@@ -1633,7 +1632,7 @@ address {
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199.98px) {
-  .card .items:nth-last-child(-n + 1) {
+  .card .items:nth-last-child(-n+1) {
     margin-bottom: 0;
   }
 }
