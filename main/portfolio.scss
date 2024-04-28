@@ -68,8 +68,8 @@
 }
 
 .buttons .items_br {
-  @include mq (before-tablet) {
-    margin-right: 8px;
+  @include mq (tablet) {
+    margin-left: 8px;
   }
 }
 
