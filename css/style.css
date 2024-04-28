@@ -212,12 +212,6 @@ address {
 @media screen and (max-width: 767.98px) {
   .navigate {
     display: block;
-    margin-bottom: 302px;
-  }
-}
-@media screen and (max-width: 480px) {
-  .navigate {
-    margin-bottom: 125px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -301,6 +295,15 @@ address {
 .list_navigate:hover,
 .list_navigate:focus {
   color: var(--accent-web-color);
+}
+
+/* Контейнер */
+@media screen and (max-width: 767.98px) {
+  .contacts_social_list {
+    position: absolute;
+    left: 40px;
+    bottom: 48px;
+  }
 }
 
 /* CONTACTS  */
@@ -423,22 +426,17 @@ address {
 .navigate_social {
   display: none;
 }
+@media screen and (max-width: 435px) {
+  .navigate_social {
+    overflow-x: auto;
+  }
+}
 @media screen and (max-width: 767.98px) {
   .navigate_social {
     display: flex;
     padding: 0;
     margin: 0;
     margin-top: 64px;
-  }
-}
-@media screen and (min-height: 320px) and (max-height: 639.98px) {
-  .navigate_social {
-    margin-top: 21px;
-  }
-}
-@media screen and (min-height: 640px) and (max-height: 735.98px) {
-  .navigate_social {
-    margin-top: 30px;
   }
 }
 
@@ -468,10 +466,9 @@ address {
   letter-spacing: 0.36px;
   color: var(--accent-web-color);
 }
-@media screen and (max-width: 376.98px) {
+@media screen and (max-width: 480px) {
   .social_link {
-    font-size: 13px;
-    letter-spacing: -1px;
+    font-size: 10px;
   }
 }
 
@@ -496,7 +493,6 @@ address {
 }
 @media screen and (min-width: 1200px) {
   .hero {
-    max-width: 1600px;
     margin-left: auto;
     margin-right: auto;
     padding-top: 200px;
@@ -985,11 +981,6 @@ address {
 .theme {
   display: inline-block;
 }
-@media screen and (min-width: 1200px) {
-  .theme {
-    text-align: start;
-  }
-}
 
 /* LOGO */
 .logo_basement {
@@ -1052,7 +1043,6 @@ address {
     margin-top: 0;
     display: inline-block;
     margin-left: 70px;
-    text-align: start;
   }
 }
 
@@ -1155,7 +1145,7 @@ address {
     display: inline-block;
     margin-right: 12px;
     margin-bottom: 0;
-    width: 357px;
+    width: 324px;
   }
 }
 
@@ -1255,7 +1245,7 @@ address {
 @media screen and (max-width: 450px) {
   .modal {
     width: 100%;
-    height: auto;
+    height: 100%;
   }
 }
 @media screen and (min-width: 767px) {
@@ -1416,7 +1406,7 @@ address {
 
 .icon_form_checkhed {
   position: absolute;
-  left: 22.5px;
+  left: 12.5px;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -1433,7 +1423,7 @@ address {
   font-weight: 400;
   line-height: 24px;
   letter-spacing: 0.42px;
-  margin-left: 21px;
+  margin-left: 7px;
 }
 
 .checkbox_link {
@@ -1576,12 +1566,6 @@ address {
   }
 }
 
-@media screen and (min-width: 768px) {
-  .items_br {
-    margin-left: 8px;
-  }
-}
-
 .options {
   display: block;
   border-radius: 4px;
@@ -1589,11 +1573,6 @@ address {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   border: transparent;
   background-color: #f5f4fa;
-}
-@media screen and (max-width: 348px) {
-  .options {
-    font-size: 13px;
-  }
 }
 @media screen and (max-width: 480px) {
   .options {
@@ -1641,18 +1620,13 @@ address {
 @media screen and (min-width: 768px) {
   .cards .items {
     width: calc((100% - 60px) / 2);
+    height: 440px;
   }
 }
 @media screen and (min-width: 1200px) {
   .cards .items {
     width: calc((100% - 60px) / 3);
     height: 400px;
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1199.98px) {
-  .card .items:nth-last-child(-n+1) {
-    margin-bottom: 0;
   }
 }
 
@@ -1675,9 +1649,7 @@ address {
 }
 
 .cards_link {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
+  display: inline-block;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -1687,11 +1659,16 @@ address {
 }
 
 .text {
-  flex-grow: 1;
   padding: 20px 24px 20px 24px;
   border-right: 1px solid rgb(238, 238, 238);
   border-bottom: 1px solid rgb(238, 238, 238);
   border-left: 1px solid rgb(238, 238, 238);
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .cards_top {
+    padding-bottom: 56px;
+  }
 }
 
 .name_project {
@@ -1721,11 +1698,6 @@ address {
   overflow: hidden;
 }
 
-.picture_cards {
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
 .description_box {
   width: 100%;
   height: 294px;
@@ -1733,7 +1705,7 @@ address {
   position: absolute;
   top: 0;
   left: 0;
-  transform: translateY(101%);
+  transform: translateY(100%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   background-color: rgba(33, 150, 243, 0.9);
 }
