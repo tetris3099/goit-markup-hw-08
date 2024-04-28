@@ -201,11 +201,6 @@ address {
 }
 
 /* NAVIGATE */
-@media screen and (max-height: 629px) {
-  .navigate {
-    margin-bottom: 30%;
-  }
-}
 
 .navigate {
   padding: 0;
@@ -213,7 +208,6 @@ address {
 
   @include mq (before-tablet) {
     display: block;
-    margin-bottom: 75.5%;
   }
 
   @include mq (tablet) {
@@ -300,6 +294,15 @@ address {
 .list_navigate:hover,
 .list_navigate:focus {
   color: var(--accent-web-color);
+}
+
+/* Контейнер */
+.contacts_social_list {
+  @include mq (before-tablet) {
+    position: absolute;
+    left: 40px;
+    bottom: 48px; 
+  }
 }
 
 /* CONTACTS  */
@@ -471,6 +474,10 @@ address {
     line-height: 22px;
     letter-spacing: 0.36px;
     color: var(--accent-web-color);
+
+    @include mq (mobile) {
+      font-size: 10px;
+    }
   }
 
 
@@ -1254,7 +1261,7 @@ address {
 @media screen and (max-width: 450px) {
   .modal {
     width: 100%;
-    height: auto;
+    height: 100%;
   }
 }
 
@@ -1263,6 +1270,7 @@ address {
     min-width: 528px;
     min-height: 581px;
   }
+
 }
 
 .close {
@@ -1375,7 +1383,6 @@ address {
   border-radius: 4px;
 
   transition: outline 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  
 }
 
 .form_coment::placeholder {
@@ -1424,7 +1431,7 @@ address {
 
 .icon_form_checkhed {
   position: absolute;
-  left: 22.5px;
+  left: 12.5px;
 
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
