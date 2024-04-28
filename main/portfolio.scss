@@ -97,6 +97,10 @@
   @include mq (mobile) {
     display: inline-block;
   }
+
+  @media screen and (max-width: 347px) {
+    font-size: 13px;
+  }
 }
 
 .transfer {
