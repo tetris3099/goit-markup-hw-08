@@ -265,7 +265,7 @@ address {
   .list_navigate_accent::after {
     content: "";
     display: block;
-    width: 48px;
+    width: 100%;
     height: 4px;
     margin-top: 28px;
     border-radius: 2px;
