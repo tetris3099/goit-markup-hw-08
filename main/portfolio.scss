@@ -67,6 +67,12 @@
   display: inline-block;
 }
 
+.buttons .items_br {
+  @include mq (before-tablet) {
+    margin-right: 8px;
+  }
+}
+
 .buttons .items + .items {
   margin-left: 8px;
 }
