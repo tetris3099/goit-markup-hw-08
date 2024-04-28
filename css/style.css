@@ -243,7 +243,7 @@ address {
   }
 }
 
-.list_navigate_studio {
+.list_navigate_accent {
   display: block;
   font-weight: 500;
   font-size: 40px;
@@ -253,7 +253,7 @@ address {
   color: #2196f3;
 }
 @media screen and (min-width: 768px) {
-  .list_navigate_studio {
+  .list_navigate_accent {
     text-align: center;
     padding-top: 32px;
     font-size: 14px;
@@ -262,7 +262,7 @@ address {
 }
 
 @media screen and (min-width: 768px) {
-  .list_navigate_studio::after {
+  .list_navigate_accent::after {
     content: "";
     display: block;
     width: 48px;
