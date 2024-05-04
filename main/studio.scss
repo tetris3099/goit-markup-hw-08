@@ -102,7 +102,7 @@ address {
   border: 0;
   color: #000000;
   background-color: transparent;
-  transform: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   @include mq (tablet) {
     display: none;
@@ -164,14 +164,12 @@ address {
 .menu-conteiner.is-open {
   @include mq (before-tablet) {
     display: block;
-    // flex-wrap: wrap;
     position: fixed;
     top: 0%;
     left: 0%;
     z-index: 1;
     width: 100vw;
     height: 100vh;
-    max-height: 796px;
     padding: 48px 40px;
 
     background-color: #FFF;
@@ -201,7 +199,6 @@ address {
 }
 
 /* NAVIGATE */
-
 .navigate {
   padding: 0;
   margin: 0;
@@ -225,15 +222,12 @@ address {
 
 }
 
-
-
 .navigate li:nth-child(2n) {
   @include mq (before-tablet) {
     margin-top: 35.71px;
     margin-bottom: 32px;
   }
 }
-
 
 .navigate li:not(:first-child) {
   @include mq (tablet) {
@@ -334,7 +328,6 @@ address {
     }
   }
 
-
 .contacts_list li:last-child {
   margin-right: 0;
 }
@@ -416,22 +409,6 @@ address {
   fill: var(--accent-web-color);
 }
 
-// @media screen and (min-width: 767px) {
-//   .contacts_list {
-    
-//   }
-
-//   .contacts {
-//     padding-top: 5px;
-//     padding-bottom: 5px;
-//   }
-
-//   .contacts_tel {
-//     padding-top: 5px;
-//     padding-bottom: 5px;
-//   }
-// }
-
 /* NAVIGATE SOCIAL */
 .navigate_social {
   display: none;
@@ -482,7 +459,7 @@ address {
 
 /* HERO */
 .hero {
-  max-width: 1200px;
+  max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
   padding-top: 118px;
@@ -544,10 +521,10 @@ address {
   text-transform: uppercase;
   color: var(--stock-text-color);
 
-  // @include mq (desktop) {
-  //   max-width: none;
-  //   width: 690px;
-  // }
+  @include mq (desktop) {
+    font-size: 44px;
+    max-width: 690px;
+  }
  }
 
 /* BUTTON */
@@ -968,6 +945,8 @@ address {
 
 /* Подвал сайта */
 .basement {
+  max-width: 1600px;
+  margin: 0 auto;
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: var(--canvas-background);
@@ -988,6 +967,10 @@ address {
     margin-left: auto;
     margin-right: auto;
     width: 768px;
+  }
+
+  @include mq (desktop) {
+    text-align: start;
   }
 }
 
@@ -1368,6 +1351,10 @@ address {
   justify-content: center;
   margin-bottom: 20px;
   cursor: pointer;
+
+  @media screen and (max-width: 450px) {
+    flex-wrap: wrap;
+  }
 }
 
 .form_coment {
@@ -1420,25 +1407,26 @@ address {
 }
 
 .icon_form_checkbox {
-  position: absolute;
-  left: 12.5px;
   fill: currentColor;
-
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), 
   color 250ms  cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon_form_checkhed {
-  position: absolute;
-  left: 12.5px;
-
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon_form_checkbox,
 .icon_form_checkhed {
-  @include mq (before-tablet) {
+  
+
+  @media screen and (min-width: 451px) {
+    position: absolute;
     left: 0;
+  }
+
+  @media screen and (min-width: 767px) {
+    left: 12.5px;
   }
 }
 
@@ -1463,37 +1451,13 @@ address {
 
 .checkbox_text,
 .checkbox_link {
-  @include mq (before-tablet) {
+  @media screen and (max-width: 766px) {
     font-size: 12px;
     font-weight: 400;
     letter-spacing: 0.36px;
   }
-}
 
-@media screen and (max-width: 360px) {
-  .checkbox_text,
-  .checkbox_link {
-    font-size: 7.5px;
-  }
-}
-
-@media screen and (min-width: 360px) and (max-width: 388px) {
-  .checkbox_text,
-  .checkbox_link {
-    font-size: 9px;
-  }
-}
-
-@media screen and (min-width: 388px) and (max-width: 425px) {
-  .checkbox_text,
-  .checkbox_link {
-    font-size: 10px;
-  }
-}
-
-@media screen and (min-width: 425px) and (max-width: 434px) {
-  .checkbox_text,
-  .checkbox_link {
+  @media screen and (max-width: 332px) {
     font-size: 11px;
   }
 }
