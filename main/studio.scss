@@ -170,7 +170,10 @@ address {
     z-index: 1;
     width: 100vw;
     height: 100vh;
+    min-height: 500px;
     padding: 48px 40px;
+    overflow-x: hidden;
+    overflow-y: scroll;
 
     background-color: #FFF;
   }
