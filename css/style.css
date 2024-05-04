@@ -103,7 +103,7 @@ address {
   border: 0;
   color: #000000;
   background-color: transparent;
-  transform: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 @media screen and (min-width: 768px) {
   .mobile-menu {
@@ -175,7 +175,6 @@ address {
     z-index: 1;
     width: 100vw;
     height: 100vh;
-    max-height: 796px;
     padding: 48px 40px;
     background-color: #FFF;
   }
@@ -474,7 +473,7 @@ address {
 
 /* HERO */
 .hero {
-  max-width: 1200px;
+  max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
   padding-top: 118px;
@@ -520,6 +519,12 @@ address {
   letter-spacing: 1.56px;
   text-transform: uppercase;
   color: var(--stock-text-color);
+}
+@media screen and (min-width: 1200px) {
+  .title {
+    font-size: 44px;
+    max-width: 690px;
+  }
 }
 
 /* BUTTON */
@@ -953,6 +958,8 @@ address {
 
 /* Подвал сайта */
 .basement {
+  max-width: 1600px;
+  margin: 0 auto;
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: var(--canvas-background);
@@ -975,6 +982,11 @@ address {
     margin-left: auto;
     margin-right: auto;
     width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .basement .conteiner {
+    text-align: start;
   }
 }
 
@@ -1345,6 +1357,11 @@ address {
   margin-bottom: 20px;
   cursor: pointer;
 }
+@media screen and (max-width: 450px) {
+  .boxcheck {
+    flex-wrap: wrap;
+  }
+}
 
 .form_coment {
   width: 100%;
@@ -1398,22 +1415,25 @@ address {
 }
 
 .icon_form_checkbox {
-  position: absolute;
-  left: 12.5px;
   fill: currentColor;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon_form_checkhed {
-  position: absolute;
-  left: 12.5px;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-@media screen and (max-width: 767.98px) {
+@media screen and (min-width: 451px) {
   .icon_form_checkbox,
   .icon_form_checkhed {
+    position: absolute;
     left: 0;
+  }
+}
+@media screen and (min-width: 767px) {
+  .icon_form_checkbox,
+  .icon_form_checkhed {
+    left: 12.5px;
   }
 }
 
@@ -1436,7 +1456,7 @@ address {
   text-decoration-line: underline;
 }
 
-@media screen and (max-width: 767.98px) {
+@media screen and (max-width: 766px) {
   .checkbox_text,
   .checkbox_link {
     font-size: 12px;
@@ -1444,31 +1464,13 @@ address {
     letter-spacing: 0.36px;
   }
 }
-
-@media screen and (max-width: 360px) {
-  .checkbox_text,
-  .checkbox_link {
-    font-size: 7.5px;
-  }
-}
-@media screen and (min-width: 360px) and (max-width: 388px) {
-  .checkbox_text,
-  .checkbox_link {
-    font-size: 9px;
-  }
-}
-@media screen and (min-width: 388px) and (max-width: 425px) {
-  .checkbox_text,
-  .checkbox_link {
-    font-size: 10px;
-  }
-}
-@media screen and (min-width: 425px) and (max-width: 434px) {
+@media screen and (max-width: 332px) {
   .checkbox_text,
   .checkbox_link {
     font-size: 11px;
   }
 }
+
 .button_form {
   width: 200px;
   height: 50px;
@@ -1626,12 +1628,15 @@ address {
 
 .cards .items {
   margin-bottom: 30px;
-  /* overflow: hidden; */
 }
 @media screen and (min-width: 768px) {
   .cards .items {
     width: calc((100% - 60px) / 2);
-    height: 440px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .cards .items {
+    display: flex;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1663,6 +1668,12 @@ address {
   display: inline-block;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .cards_link {
+    display: flex;
+    flex-direction: column;
+  }
+}
 
 .cards_link:hover,
 .cards_link:focus {
@@ -1675,14 +1686,14 @@ address {
   border-bottom: 1px solid rgb(238, 238, 238);
   border-left: 1px solid rgb(238, 238, 238);
 }
-
 @media screen and (min-width: 768px) and (max-width: 1199.98px) {
-  .cards_top {
-    padding-bottom: 56px;
+  .text {
+    flex-grow: 1;
   }
 }
 
 .name_project {
+  width: 100%;
   margin: 0;
   margin-bottom: 4px;
   font-weight: 700;
@@ -1716,7 +1727,7 @@ address {
   position: absolute;
   top: 0;
   left: 0;
-  transform: translateY(100%);
+  transform: translateY(110%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   background-color: rgba(33, 150, 243, 0.9);
 }
