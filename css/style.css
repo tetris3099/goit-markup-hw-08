@@ -961,7 +961,6 @@ address {
 
 /* Подвал сайта */
 .basement {
-  max-width: 1600px;
   margin: 0 auto;
   padding-top: 60px;
   padding-bottom: 60px;
@@ -1219,7 +1218,7 @@ address {
 .black_box {
   width: 100vw;
   height: 100vh;
-  overflow-y: scroll;
+  overflow-y: hidden;
   position: fixed;
   top: 0;
   left: 0;
@@ -1302,6 +1301,21 @@ address {
   font-weight: 700;
   letter-spacing: 0.6px;
 }
+@media screen and (min-width: 480px) and (max-width: 767.98px) {
+  .modal_text {
+    font-size: 17px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .modal_text {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .modal_text {
+    font-size: 12px;
+  }
+}
 
 /* FORM */
 .form_field {
@@ -1376,6 +1390,16 @@ address {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   transition: outline 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (max-width: 480px) {
+  .form_coment {
+    height: 58px;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 767.98px) {
+  .form_coment {
+    height: 100px;
+  }
 }
 
 .form_coment::-moz-placeholder {
@@ -1497,6 +1521,26 @@ address {
   background-color: #188CE8;
 }
 
+@media screen and (max-width: 768px) and (orientation: landscape) {
+  .menu-conteiner.is-open {
+    padding: 20px 40px;
+  }
+  .navigate li:nth-child(2n) {
+    margin-top: 8px;
+    margin-bottom: 3px;
+  }
+  .contacts_social_list {
+    position: relative;
+    left: 0;
+    bottom: 0;
+  }
+  .contacts_list li:nth-child(2n) {
+    margin-bottom: 8px;
+  }
+  .navigate_social {
+    margin-top: 15px;
+  }
+}
 .list_navigate_portfolio {
   display: block;
   font-weight: 500;
